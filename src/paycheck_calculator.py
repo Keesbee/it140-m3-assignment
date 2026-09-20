@@ -1,40 +1,16 @@
-"""TODO: Replace with a one-line summary of the optional program (<73 chars).
+START paycheck_calculator
 
-Input:
-    TODO: Replace with the major input, including its type and source.
+    GET hours_worked
 
-Process:
-    TODO: Replace with a brief description of the major processing.
+    IF hours_worked <= 40
+        LET weekly_paycheck = hours_worked * 20
+    ELSE
+        LET regular_pay = 40 * 20
+        LET overtime_hours = hours_worked - 40
+        LET overtime_pay = overtime_hours * 30
+        LET weekly_paycheck = regular_pay + overtime_pay
+    ENDIF
 
-Output:
-    TODO: Replace with the major output, including its destination.
+    PUT weekly_paycheck
 
-Typical usage example:
-    TODO: Replace with an original hours-worked input example.
-    TODO: Replace with the resulting paycheck output for your example.
-"""
-
-# === Constants ===
-REGULAR_RATE = 20
-OVERTIME_RATE = 30
-REGULAR_HOURS_LIMIT = 40
-
-
-# === Main Function ===
-def main() -> None:
-    """Run the optional paycheck calculator practice program."""
-
-    # TODO: Replace with code to obtain hours worked in a numeric form.
-
-    # TODO: Replace with decision branching and processing from your design.
-
-    # TODO: Replace with code to display the calculated weekly paycheck.
-
-
-# === Main Guard ===
-if __name__ == "__main__":
-    main()
-
-
-# === References ===
-# TODO: Add APA-style reference for outside help you used, or delete this line.
+END paycheck_calculator
